@@ -1,0 +1,120 @@
+body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Centralizando os botões */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilo comum para todos os botões */
+.btn {
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    margin: 5px 0;
+    width: 250px;
+    /* Largura fixa para os botões */
+    text-align: center;
+    border-radius: 30px;
+}
+
+/* 1. Efeito de Mudança de Cor com Gradiente */
+.btn-color-change {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+.btn-color-change:hover {
+    background: linear-gradient(135deg, #1e3c72, #56c6c6);
+    color: #ffffff;
+    box-shadow: 0 0 10px #56c6c6;
+}
+
+/* 2. Efeito de Sublinhado com Neon */
+.btn-underline {
+    background-color: transparent;
+    color: #1abc9c;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #1abc9c;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.btn-underline:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* 3. Efeito de Escala com Neon */
+.btn-scale {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.btn-scale:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c, 0 0 30px #1abc9c;
+}
+
+/* 4. Efeito de Sombra com Neon */
+.btn-shadow {
+    background-color: #34495e;
+    color: white;
+    box-shadow: none;
+}
+
+.btn-shadow:hover {
+    box-shadow: 0 0 10px #2ecc71, 0 0 20px #2ecc71, 0 0 30px #2ecc71;
+    color: #2ecc71;
+}
+
+/* 5. Efeito de Preenchimento com Neon */
+.btn-fill {
+    background-color: transparent;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-fill::before {
+    content: "";
+    background-color: #e74c3c;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-fill:hover::before {
+    left: 0;
+}
+
+.btn-fill:hover {
+    color: white;
+    text-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c;
+}
